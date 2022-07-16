@@ -12,7 +12,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors"/>
 
-        <form method="POST" action="{{ route('login') }}" id="{{ getFormId() }}">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <!-- Email Address -->
@@ -33,18 +33,14 @@
                          required autocomplete="current-password"/>
             </div>
 
+            {{  session('attempts') }}
 
-            <div class="mt-4">
-                {!! htmlFormButton("lofasz") !!}
-                {{--                {!! htmlFormSnippet([--}}
-                {{--    "theme" => "light",--}}
-                {{--    "size" => "normal",--}}
-                {{--    "tabindex" => "3",--}}
-                {{--    "callback" => "callbackFunction",--}}
-                {{--    "expired-callback" => "expiredCallbackFunction",--}}
-                {{--     "error-callback" => "errorCallbackFunction",--}}
-                {{--]) !!}--}}
-            </div>
+            @if(session('attempts') > 3)
+                <div class="mt-4">
+                    @captcha
+                    <input type="text" id="captcha" name="captcha" autocomplete="off">
+                </div>
+            @endif
 
             <!-- Remember Me -->
             <div class="block mt-4">

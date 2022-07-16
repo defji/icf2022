@@ -28,10 +28,17 @@ class LoginRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+
+        session(['attempts' => RateLimiter::attempts($this->throttleKey())]);
+
+        $rules = [
             'email'    => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
         ];
+        if (session('attepmts') > 3) {
+            $rules['captcha'] = 'required|captcha';
+        }
+        return $rules;
     }
 
     /**
@@ -65,7 +72,9 @@ class LoginRequest extends FormRequest
      */
     public function ensureIsNotRateLimited()
     {
-        if (!RateLimiter::tooManyAttempts($this->throttleKey(), 3)) {
+
+
+        if (!RateLimiter::tooManyAttempts($this->throttleKey(), 9)) {
             return;
         }
 
