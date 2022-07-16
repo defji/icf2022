@@ -1,9 +1,9 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500"/>
-            </a>
+            <img
+                src="https://media-exp1.licdn.com/dms/image/C4E0BAQFyVQoZkYuXbw/company-logo_200_200/0/1619597228272?e=2147483647&v=beta&t=VVH0CdrtwfYel1npGRCr1z0X6mLEYb3QG6lYo4prFWY"
+                alt="ICF Tech Hungary">
         </x-slot>
 
         <!-- Session Status -->
