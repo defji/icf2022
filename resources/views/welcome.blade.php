@@ -419,7 +419,7 @@
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <img
-            src="https://media-exp1.licdn.com/dms/image/C4E0BAQFyVQoZkYuXbw/company-logo_200_200/0/1619597228272?e=2147483647&v=beta&t=VVH0CdrtwfYel1npGRCr1z0X6mLEYb3QG6lYo4prFWY"
+            src="https://d27i7n2isjbnbi.cloudfront.net/careers/photos/137823/thumb_photo_1571648051.png"
             alt="ICF Tech Hungary">
 
 

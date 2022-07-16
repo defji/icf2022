@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <img
-                src="https://media-exp1.licdn.com/dms/image/C4E0BAQFyVQoZkYuXbw/company-logo_200_200/0/1619597228272?e=2147483647&v=beta&t=VVH0CdrtwfYel1npGRCr1z0X6mLEYb3QG6lYo4prFWY"
+                src="https://d27i7n2isjbnbi.cloudfront.net/careers/photos/137823/thumb_photo_1571648051.png"
                 alt="ICF Tech Hungary">
         </x-slot>
 
