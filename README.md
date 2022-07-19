@@ -11,13 +11,13 @@ php artisan migrate:fresh --seed
 npm install && npm run dev
 ```
 
-## Roles
+## Defined roles
 
 - admin (administrator)
 - editor (content-editor)
 - user (regular user)
 
-## Registered users
+## Pre-Registered users
 
 All passwords are: __user__
 
