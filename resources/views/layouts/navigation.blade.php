@@ -14,9 +14,26 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @hasanyrole('admin')
+                    <x-nav-link :href="route('admins')" :active="request()->routeIs('admins')">
+                        {{ __('Administrators') }}
+                    </x-nav-link>
+                    @endhasanyrole
+                    @hasanyrole('admin|editor')
+                    <x-nav-link :href="route('content-editors')" :active="request()->routeIs('content-editors')">
+                        {{ __('Content editors') }}
+                    </x-nav-link>
+                    @endhasanyrole
+                    @hasanyrole('admin|user')
+                    <x-nav-link :href="route('regular-users')" :active="request()->routeIs('regular-users')">
+                        {{ __('Regular users') }}
+                    </x-nav-link>
+                    @endhasanyrole
                 </div>
             </div>
 
