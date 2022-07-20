@@ -1,7 +1,7 @@
 # Sample application for ICF Tech Hungary
 
 ## Requirements
-PHP 8.1+
+PHP 8.1+, nodejs 
 
 ## Installation notes
 
@@ -9,7 +9,9 @@ PHP 8.1+
 git clone git@github.com:defji/icf2022.git
 cp .env.example .env
 #edit database credentials in .env file
+#set SESSION_DRIVER to 'database'
 composer install
+php artisan session:table
 php artisan migrate:fresh --seed
 npm install && npm run dev
 php artisan serve
