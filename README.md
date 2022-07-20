@@ -10,7 +10,7 @@ composer install
 php artisan migrate:fresh --seed
 npm install && npm run dev
 php artisan serve
-#click link open browser 
+#click on link!
 ```
 
 ## Defined roles
