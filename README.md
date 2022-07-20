@@ -1,5 +1,8 @@
 # Sample application for ICF Tech Hungary
 
+## Requirements
+PHP 8.1+
+
 ## Installation notes
 
 ```sh
